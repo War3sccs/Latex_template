@@ -1,0 +1,49 @@
+% 图片模板
+      \begin{figure}[h]
+         \centering
+
+         \begin{tikzpicture}
+            %定义图像
+            \node at (0,0) {\includegraphics[height=13cm]{p11.PNG}};
+
+            %说明
+            \def \itemNumber {1};
+            \def \centertPoint {-3.9,1.1};
+            \node at (-7,3) (\itemNumber) [text_box] {检修旁通阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+            \def \itemNumber {2};
+            \def \centertPoint {-0.3, -4.2};
+            \node at (-2,-6) (\itemNumber) [text_box] {放空阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+            \def \itemNumber {3};
+            \def \centertPoint {-1.5, -3.5};
+            \node at (-4,-5) (\itemNumber) [text_box] {放空阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+            \def \itemNumber {4};
+            \def \centertPoint {-2.8, -2.8};
+            \node at (-6,-4) (\itemNumber) [text_box] {放空阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+            \def \itemNumber {5};
+            \def \centertPoint {-3.4,1.4};
+            \node at (-5,5) (\itemNumber) [text_box] {检修截止阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+            \def \itemNumber {6};
+            \def \centertPoint {-2.5,0};
+            \node at (-7,0) (\itemNumber) [text_box] {检修截止阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+
+			% 辅助线
+             \def \xLimit {8};
+             \def \yLimit {8};
+             %\input{auxiliary_line}
+
+         \end{tikzpicture}
+         \caption{各检修阀位置}\label{fig:p11}
+      \end{figure}
+

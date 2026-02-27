@@ -1,0 +1,25 @@
+
+%文档设置及格式
+\documentclass[UTF8,a4paper,12pt,titlepage]{ctexart}
+% tittlepage制作一个封面
+% draft是草稿，有个方框
+%\documentclass[UTF8,a4paper,11pt]{book}
+
+%\CTEXsetup[name={第,章}]{section}%每section统一名称
+
+%每章节题目统一格式
+\CTEXsetup[format={\zihao{-3}\raggedright\bfseries}]
+{section}
+
+\newcommand{\keyword}[1]{\textbf{#1}}
+
+
+% 纸张格式
+\usepackage[paper=a4paper,inner=1.5cm,outer=2cm,top=2cm,
+bottom=2.5cm,bindingoffset=0.5cm]{geometry}
+
+\usepackage[onehalfspacing]{setspace} % 1.5倍行距
+
+% 自动链接内容(网页链接)
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+

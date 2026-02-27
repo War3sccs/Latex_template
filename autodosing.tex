@@ -1,0 +1,26 @@
+
+      \subsubsection{自动投加系统功能}
+         自动投加系统按设定参数向进水总管投加PAM溶液。
+         \par主要设定参数：
+         \begin{itemize}
+            \item 溶液投率。设计溶液投率为1mg/L，可修改。
+            \item 溶液浓度。常用浓度为1\% $\sim$2\%。
+            \item 源水低水量报警。
+            源水水量低于此设定则自动停泵。
+            \item 计量泵轮换设置。
+            计量泵连续运行若干小时，
+            则切换到另1台计量泵运行。
+            \item 储液池低液位报警设置。
+            低于此液位PAM溶液不足，
+            自动停泵。
+         \end{itemize}
+         \par控制系统按以下公式\ref{chemical-flow}计算的流量，
+         控制计量泵变频器，
+         向进水总管投加制备好的PAM溶液。
+         \begin{equation}
+            \label{chemical-flow}
+            \mbox{投加流量}(L/h) = \mbox{溶液投率}(mg/L) \times 
+            \mbox{源水水量}(m^3/h) \div 
+            \mbox{溶液浓度}(\%)
+         \end{equation}
+

@@ -1,0 +1,33 @@
+
+
+      \begin{figure}[h]
+         \centering
+            \begin{tikzpicture}
+               %图片
+               \node at (0,0) {\includegraphics[height=8cm]{p20.PNG}};
+
+               %说明
+               \node at (-5,3) (1) [text_box, color=red] {切换到其他控制界面};
+               \draw (-6.5,1.8) rectangle +(3.3,1)[red];
+
+                \def \itemNumber {2};
+                \node at (-5,1.5) (\itemNumber) [text_box] {液位报警设置};
+                \def \centertPoint {-6.3,-0.9};
+                \draw (\centertPoint) rectangle +(3.9,2)[red];
+                \draw [arrow] (\itemNumber) -- (-4.5,0);
+
+                \node at (5,3) (3) [text_box] {自动稀释设置};
+                \draw (2.4,-0.9) rectangle +(3.9,2)[red];
+                \draw [arrow] (3) -- (4,0);
+
+                \node at (-5.5,-3.8) (4) [text_box] {1号计量泵控制};
+                \node at (5.5,-3.8) (5) [text_box] {2号计量泵控制};
+
+            % 辅助线
+               \def \xLimit {8};
+               \def \yLimit {5};
+                %\input{auxiliary_line}
+
+            \end{tikzpicture}
+            \caption{成品投加控制界面}\label{fig:p7}
+      \end{figure}

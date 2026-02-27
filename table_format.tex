@@ -1,0 +1,10 @@
+% 表格 定义表头字体
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+
+% 表格 特殊命令，见后文 array
+% 在竖向多种对齐方式
+\usepackage{array}
+\setlength{\extrarowheight}{4pt} % 增加列距
+\usepackage{booktabs} % 用于美化表格的线
+\usepackage{multirow} % 合并行
+\newcommand{\normal}[1]{\multicolumn{1}{l}{#1}}

@@ -1,0 +1,93 @@
+% *- coding: UTF-8 -*-
+% !TEX builder = Texlive
+% !TEX prggram = xelatex
+
+%文档设置及格式
+\include{document_setting}
+
+% 设置文件属性内容
+\hypersetup{pdfauthor={吴毓明},
+            pdftitle={PAM制备投加装置},
+            pdfsubject={使用说明},
+            pdfkeywords={任何问题，联系61508712@qq.com}}
+
+% 定义页眉页脚
+%\include{foot_head}
+
+% 表格格式定义
+%\include{table_format}
+
+% 图片
+%\include{picture_configuration}
+
+% 特殊符号(例如千分号等)
+\usepackage{textcomp}
+\usepackage{amsmath}
+
+% 开始正文
+\begin{document}
+
+以下大写字母代表列，例如I指代第I列。\\
+E13指具体单元格。\\
+\begin{gather}
+    \label{1}
+    I=G*H \\
+    \label{2}
+    G=C*F\\
+    \label{3}
+    F=\frac{E}{E13}\\
+    \label{4}
+    H=\frac{C13}{G13}
+\end{gather}
+将(\ref{2})、(\ref{3})代入(\ref{1})，可得：\\
+\begin{gather}
+    \label{5}
+    I=G*H=C*F*C13*G13=C*\frac{E}{E13}*\frac{C13}{G13}=\frac{C*E*C13}{E13*G13}
+\end{gather}
+其中：
+\begin{gather}
+    \label{6}
+    G13=sum(G4:G12)=G4+G5+G6+G7+G8+G9+G10+G11+G12
+\end{gather}
+根据(\ref{2})，并将(\ref{3})代入(\ref{2})则
+\begin{gather}
+    \label{7}
+    G4=C4*F4=C4*\frac{E4}{E13}=\frac{C4*E4}{E13}\\
+    G5=C5*F5=C5*\frac{E5}{E13}=\frac{C5*E5}{E13}\\
+    G6=C6*F6=C6*\frac{E6}{E13}=\frac{C6*E6}{E13}\\
+    G7=C7*F7=C7*\frac{E7}{E13}=\frac{C7*E7}{E13}\\
+    G8=C8*F8=C8*\frac{E8}{E13}=\frac{C8*E8}{E13}\\
+    G9=C9*F9=C9*\frac{E9}{E13}=\frac{C9*E9}{E13}\\
+    G10=C10*F10=C10*\frac{E10}{E13}=\frac{C10*E10}{E13}\\
+    G11=C11*F11=C11*\frac{E11}{E13}=\frac{C11*E11}{E13}\\
+    \label{15}
+    G12=C12*F12=C12*\frac{E12}{E13}=\frac{C12*E12}{E13}
+\end{gather}
+将(\ref{7})至(\ref{15})代入(\ref{6})，则
+\begin{multline}
+    G13=\frac{C4*E4}{E13}+\frac{C5*E5}{E13}+\frac{C6*E6}{E13}+\frac{C7*E7}{E13}+\frac{C8*E8}{E13}+\\
+    \frac{C9*E9}{E13}+\frac{C10*E10}{E13}+\frac{C11*E11}{E13}+\frac{C12*E12}{E13}
+\end{multline}
+即
+\begin{equation}
+    \label{17}
+    G13=(C4*E4+C5*E5+C6*E6+C7*E7+C8*E8+C9*E9+C10*E10+C11*E11+C12*E12)/E13
+\end{equation}
+将(\ref{17})、代入(\ref{5})，则
+\begin{equation}
+    \label{18}
+    I=\frac{C*E*C13}{E13*\frac{C4*E4+C5*E5+C6*E6+C7*E7+C8*E8+C9*E9+C10*E10+C11*E11+C12*E12}{E13}}
+\end{equation}
+化简(\ref{18})得
+\begin{multline}
+    \label{19}
+    I=\\
+    \frac{C*E*C13}{C4*E4+C5*E5+C6*E6+C7*E7+C8*E8+C9*E9+C10*E10+C11*E11+C12*E12}
+\end{multline}
+由上可得，I的值和E13的数值无关。
+
+
+
+
+
+\end{document}

@@ -1,0 +1,54 @@
+% 图片模板
+      \begin{figure}[h]
+         \centering
+
+         \begin{tikzpicture}
+            %定义图像
+            \node at (0,0) {\includegraphics[height=10cm]{p11.PNG}};
+
+            %说明
+            \def \itemNumber {1};
+            \def \centertPoint {0,2.5};
+            \node at (1,5) (\itemNumber) [text_box] {搅拌机};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+
+            \def \itemNumber {2};
+            \def \centertPoint {-0.2, -3.2};
+            \node at (-2,-5) (\itemNumber) [text_box] {放空阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+
+            \def \itemNumber {3};
+            \def \centertPoint {-1.1, -2.7};
+            \node at (-4,-4) (\itemNumber) [text_box] {放空阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+
+            \def \itemNumber {4};
+            \def \centertPoint {-2.2, -2};
+            \node at (-6,-3) (\itemNumber) [text_box] {放空阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+
+            \def \itemNumber {5};
+            \def \centertPoint {0,1};
+            \node at (3,4) (\itemNumber) [text_box] {螺旋进料器};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+
+            \def \itemNumber {6};
+            \def \centertPoint {1.7,1.6};
+            \node at (5,3) (\itemNumber) [text_box] {搅拌机};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+
+			% 辅助线
+             \def \xLimit {5};
+             \def \yLimit {5};
+             %\input{auxiliary_line}
+
+         \end{tikzpicture}
+         \caption{搅拌机及螺旋进料器检修}\label{fig:p13}
+      \end{figure}
+

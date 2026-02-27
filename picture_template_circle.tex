@@ -1,0 +1,52 @@
+% 图片模板
+      \begin{figure}[h]
+         \centering
+
+         \begin{tikzpicture}
+            %定义图像
+            \node at (0,0) {\includegraphics[height=13cm]{p11.PNG}};
+
+            %说明
+            \def \itemNumber {1};
+            \def \centertPoint {-3.8,1.2};
+            \node at (-6,5) (\itemNumber) [text_box] {检修旁通阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+            \def \itemNumber {2};
+            \def \centertPoint {-0.3, -4.2};
+            \node at (-2,-6) (\itemNumber) [text_box] {放空阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+            \def \itemNumber {3};
+            \def \centertPoint {-1.5, -3.5};
+            \node at (-4,-5) (\itemNumber) [text_box] {放空阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+            \def \itemNumber {4};
+            \def \centertPoint {-2.8, -2.8};
+            \node at (-6,-4) (\itemNumber) [text_box] {放空阀};
+            \draw [arrow] (\itemNumber) -- (\centertPoint);
+            \draw (\centertPoint) circle (0.5)[red];
+
+               \node at (-5,2.7) (1) [text_box, color=red] {切换到其他控制界面};
+               \draw (-6.8,0.2) rectangle +(3.3,2.2)[red];
+                \def \itemNumber {2};
+                \def \centertPoint {3,0.1};
+                \node at (8,0.5) (\itemNumber) [text_box] {低液位报警设置};
+                \draw [arrow] (\itemNumber) -- (6.5,0.5);
+                \draw (\centertPoint) rectangle +(3.7,0.5)[red];
+                \node at (8,2.5) (3) [text_box] {低源水水量};
+                \draw (3.5,1.8) rectangle +(2.3,0.6)[red];
+                \draw [arrow] (3) -- (4.5,2);
+                \node at (-5.5,-3.5) (4) [text_box] {1号计量泵控制};
+                \node at (5.5,-3.5) (5) [text_box] {2号计量泵控制};
+
+			% 辅助线
+             %\def \xLimit {8};
+             %\def \yLimit {8};
+             %\input{auxiliary_line}
+
+         \end{tikzpicture}
+         \caption{各检修阀位置}\label{fig:p3}
+      \end{figure}
+

@@ -1,0 +1,14 @@
+
+			% 辅助线
+            \draw (-\xLimit,-\yLimit) [help lines] grid (\xLimit,\yLimit);
+            \foreach \x in {-\xLimit, ...,\xLimit}{
+               \node [red] at (\x, \yLimit) {\x};
+               \node [red] at (\x, -\yLimit) {\x};
+               \node [red] at (\x, 0) {\x};
+            }
+            \foreach \y in {-\yLimit, ...,\yLimit}
+                  \node [red] at (-\xLimit, \y) {\y};
+            \foreach \y in {-\yLimit, ...,\yLimit}
+                  \node [red] at (\xLimit, \y) {\y};
+            \foreach \y in {-\yLimit, ...,\yLimit}
+                  \node [red] at (0, \y) {\y};
