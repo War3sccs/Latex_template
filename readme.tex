@@ -1,19 +1,21 @@
+% *- coding: UTF-8 -*-
+% !TEX builder = Texlive
+% !TEX prggram = xelatex
 
 %文档设置及格式
+\documentclass[UTF8,a4paper,12pt,titlepage]{ctexart}
 \include{document_setting}
 
-% 定义页眉页脚
-\include{foot_head}
+% 特殊符号(例如千分号等)
+\usepackage{textcomp}
 
-% 表格格式定义
-\include{table_format}
+% 开始正文
+\begin{document}
+\quad\\
+文件名命名规则：\\
+类型-项目名称.tex\\
+范例：\\
+PAM制备投加一体化装置操作说明-2025-王远望-红寺堡第二污水厂深度处理车间-PAM制备投加.tex\\
 
-% 制作封面
-\include{title}
 
-% 带说明的图片
-% 不带圈的说明
-\input{picture_template}
-% 带圈的说明
-\input{picture_template_circle}
-
+\end{document}
