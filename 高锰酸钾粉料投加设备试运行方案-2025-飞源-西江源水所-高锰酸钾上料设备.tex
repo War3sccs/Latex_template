@@ -1,0 +1,46 @@
+% *- coding: UTF-8 -*-
+% !TEX builder = Texlive
+% !TEX prggram = xelatex
+
+%文档设置及格式
+\documentclass[UTF8,a4paper,12pt,titlepage]{ctexart}
+\include{document_setting}
+
+% 设置文件属性内容
+\hypersetup{pdfauthor={吴毓明},
+            pdftitle={PAM制备投加装置},
+            pdfsubject={使用说明},
+            pdfkeywords={任何问题，联系61508712@qq.com}}
+
+% 定义页眉页脚
+\include{foot_head}
+
+% 表格格式定义
+\include{table_format}
+
+% 图片
+\include{picture_configuration}
+
+% 特殊符号(例如千分号等)
+\usepackage{textcomp}
+
+% 流程图
+\include{flow_chart_preamble}
+
+% 开始正文
+\begin{document}
+
+% 制作封面
+\include{title}
+
+\tableofcontents % 目录
+
+\newpage % 换页
+
+%\part{系统组成}
+%ctex的\chapter{sdsg}是不能用的
+
+
+
+
+\end{document}

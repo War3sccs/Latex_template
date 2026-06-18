@@ -1,0 +1,60 @@
+
+% 流程图
+% 导入tikz绘图包
+\usepackage{tikz}
+% 导入基本图形
+\usetikzlibrary{shapes,arrows}
+% 定义流程图基本元素
+    %开始结束
+    \tikzstyle{startstop} = [
+        rectangle,
+        rounded corners,
+        minimum width=3cm,
+        minimum height=1cm,
+        text centered, 
+        draw=black,
+        fill=red!30 %填充颜色
+        ]
+    %输入输出
+    \tikzstyle{io} = [
+        trapezium, 
+        trapezium left angle = 70,
+        trapezium right angle=110,
+        minimum width=3cm,
+        minimum height=1cm,
+        text centered,
+        draw=black,
+        fill=blue!30 %填充颜色
+        ]
+    %操作
+    \tikzstyle{process} = [
+        rectangle,
+        minimum width=2.5cm,
+        minimum height=1cm,
+        text centered,
+        text width =2.5cm,
+        draw=black,
+        fill=orange!30 %填充颜色
+        ]
+    %判断
+    \tikzstyle{decision} = [
+        diamond,
+        minimum width=3cm,
+        minimum height=1cm,
+        text centered,
+        draw=black,
+        fill=green!30 %填充颜色
+        ]
+    %箭头
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+%说明文字
+\tikzstyle{text_box} = [
+   rectangle,
+   rounded corners,
+   minimum width=1.5cm,
+   minimum height=0.5cm,
+   text centered, 
+   ]
+%箭头
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
