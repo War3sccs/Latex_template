@@ -1,19 +1,29 @@
 
 
-      \begin{figure}[h]
-         \centering
-            \begin{tikzpicture}
-               %图片
-               \node at (0,0) {\includegraphics[height=8cm]{p21.PNG}};
+\begin{figure}[h]
+ \centering
+    \begin{tikzpicture}
+       %图片
+       \node at (0,0) {\includegraphics[height=6cm]{f6.PNG}};
 
-               %说明
+        %说明
+        \def \itemNumber {1};
+        \def \centertPoint {-0.3,-0.6};
+        \node at (-5,0) (\itemNumber) [text_box] {启动按钮};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.3)[red];
+        \def \itemNumber {2};
+        \def \centertPoint {0.3,-0.6};
+        \node at (5,0) (\itemNumber) [text_box] {停止按钮};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.3)[red];
 
-            % 辅助线
-               \def \xLimit {8};
-               \def \yLimit {4};
-               % \input{auxiliary_line}
+        % 辅助线
+       \def \xLimit {8};
+       \def \yLimit {5};
+       %\input{auxiliary_line}
 
-            \end{tikzpicture}
-         \caption{溶液制备控制界面}\label{fig:p8}
-      \end{figure}
+    \end{tikzpicture}
+ \caption{吸料控制柜}\label{fig:p7}
+\end{figure}
 

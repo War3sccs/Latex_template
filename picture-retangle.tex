@@ -1,0 +1,28 @@
+
+        \begin{figure}[h]
+            \centering
+            \begin{tikzpicture}
+                %图片
+                \node at (-5,0) {\includegraphics[height=10cm]{f4.PNG}};
+                \node at (5,0) {\includegraphics[height=10cm]{f5.PNG}};
+
+                %说明
+                \def \itemNumber {1};
+                \def \centertPoint {-1.6, 1.8};
+                \node at (-2,1.5) (\itemNumber) [text_box] {上级电柜-本系统电源开关};
+                \draw (\centertPoint) rectangle +(1.3,0.5)[red];
+                \def \itemNumber {2};
+                \def \centertPoint {2,5.5};
+                \node at (\centertPoint) (\itemNumber) [text_box] {主控制柜-总电源开关};
+                \draw [arrow] (\itemNumber) -- (0.3,2);
+                \draw (-0.2,1.8) rectangle +(0.7,0.5)[red];
+
+                % 辅助线
+                \def \xLimit {8};
+                \def \yLimit {8};
+                \input{auxiliary_line}
+
+            \end{tikzpicture}
+            \caption{电柜操作面板布局}\label{fig:p4}
+        \end{figure}
+

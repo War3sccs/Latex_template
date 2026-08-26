@@ -1,0 +1,185 @@
+% *- coding: UTF-8 -*-
+% !TEX builder = Texlive
+% !TEX prggram = xelatex
+
+%文档设置及格式
+\documentclass[UTF8,a4paper,12pt,titlepage]{ctexart}
+\include{document_setting}
+
+% 设置文件属性内容
+\hypersetup{pdfauthor={吴毓明},
+            pdftitle={PAM制备投加装置},
+            pdfsubject={使用说明},
+            pdfkeywords={任何问题，联系61508712@qq.com}}
+
+% 定义页眉页脚
+\include{foot_head}
+
+% 表格格式定义
+\include{table_format}
+
+% 图片
+\include{picture_configuration}
+
+% 特殊符号(例如千分号等)
+\usepackage{textcomp}
+
+% 流程图
+\include{flow_chart_preamble}
+
+% 开始正文
+\begin{document}
+
+% 制作封面
+\include{title}
+
+\tableofcontents % 目录
+
+\newpage % 换页
+
+%\part{系统组成}
+%ctex的\chapter{sdsg}是不能用的
+
+\section{系统组成及功能说明}
+   \subsection{系统主要设备}
+   高锰酸钾上料设备 的主要组成部分，如下图\ref{fig:p1}所示。
+
+   \input{picture1}
+   系统主要设备组成及说明如下：
+   \begin{itemize}
+       \item 吸料控制柜：吸料操作控制，触摸屏显示吸料过程运行状态。
+       \item 投加机：高锰酸钾粉体物料 的主要储存、投加、溶配主要设备，详细说明见\ref{main_machine}。
+       \item 送料风机：提供动力，将 高锰酸钾粉体物料 从 投加机 输送到 1号、2号、3号储液罐。
+       \item 吸料风机：提供动力，将 高锰酸钾粉体物料 吸入到 储存破拱料斗。
+       \item 空压机：给整套系统提供压缩空气。
+       \item 冷干机：通过冷却的方法，干燥 压缩空气，为系统提供干燥的 压缩空气 源。
+           通过向 储存破拱料斗 加入 干燥的 压缩空气，保证 储存破拱料斗内湿度 低于设定值，防止物料结拱结块。
+       \item 储气罐：储存 压缩空气。
+       \item 主控制柜：系统自动控制主要设备，安装PLC、触摸屏等。
+   \end{itemize}
+
+   \subsection{投加机组成说明}\label{main_machine}
+   投加机 的主要组成部分，如下图\ref{fig:p2}所示。
+
+   \input{picture2}
+   投加机主要设备组成及说明如下：
+   \begin{itemize}
+       \item 吸料料斗：暂存吸料机吸入的 高锰酸钾粉体物料。
+       \item 温湿度探头：检测 储存破拱料斗内湿度。若湿度高于设定值，则向 储存破拱料斗内 通入 干燥冷空气，防止物料结拱结块。
+       \item 储存破拱料斗：储存 高锰酸钾粉体物料。
+       \item 空气炮：当 储存破拱料斗内 湿度过高 或 投加过程中，向 储存破拱料斗内 通入 高压 干燥冷空气，防止物料结拱结块。
+       \item 气碟：系统投加溶配工作时，辅助 储存破拱料斗内 高锰酸钾粉体物料 流动。
+       \item 出仓阀：控制 高锰酸钾粉体物料 进入 螺旋进料器。
+       \item 螺旋进料器：定量输送 高锰酸钾粉料， 确保投加量准确。
+       \item 下料阀：控制 高锰酸钾粉体物料 进入 送料射流器。
+   \end{itemize}
+
+\section{系统启动}\label{sec:sg1}
+   \subsection{检查空压机油位}
+   系统启动前，先检查 空压机 气液分离器油位。
+   气液分离器 如下图\ref{fig:p3}所示。
+   \input{picture3}
+   观察 油位视窗，如果 油位过低，则从 加油口 加入 46号螺杆空压机润滑油；
+   如果 在 油位视窗 中发现 润滑油含水量过多，则打开下部 排水口，排出 气液分离器内水份。
+
+   \subsection{检查系统管道系统}
+   检查 高锰酸钾上料设备系统 的物料管路、吸风管路、压缩空气管路，确保管路通畅。
+
+   \subsection{系统上电}\label{sec:sg2}
+   依次接通上级电柜中 高锰酸钾上料设备 电源开关，以及 主控制柜 中 总电源开关。
+   \input{picture4}
+   \par系统上电后，空压机 会自动启动，直到 压缩空气压力达到0.5-0.7MPa时，才能进行吸料操作或投加操作。
+   压缩空气压力未达设置，系统会“气压低”报警，无法 进行吸料操作或投加操作。
+   \par两个开关位置 如下图\ref{fig:p4}所示。
+
+\section{吸料系统操作规程}
+   \subsection{吸料工作流程}
+   吸料工作流程 如下：
+   \begin{enumerate}
+       \item 启动吸料。
+       \item 系统自动通过压缩空气反冲清理吸料系统滤芯。
+       \item 启动 吸料风机，将 高锰酸钾粉料 吸入到 吸料料斗。
+       \item 到达设定 吸料时间，停止 吸料风机，高锰酸钾粉料 从 吸料料斗 落入 储存破拱料斗。
+       \item 系统自动通过压缩空气反冲清理吸料系统滤芯。
+       \item 启动 吸料风机，将 高锰酸钾粉料 吸入到 吸料料斗。
+       \item 上述两步循环运行，直到吸完所有物料，停止吸料。
+   \end{enumerate}
+
+   \newpage
+
+   \subsection{吸料控制柜操作界面}
+   \input{picture5}
+
+   \subsection{吸料参数设置}
+   \input{picture6}
+   \par吸料参数 有 吸料时间、落料延时、滤芯清理次数3项参数设置：
+   \begin{itemize}
+       \item 吸料时间：吸料风机每次运行的时间，建议设置为1次或2次吸完1罐物料较有合适，具体时间建议由实验测定。
+       \item 落料延时：高锰酸钾粉体物料 从 吸料料斗 落入 储存破拱料斗用时，此时间内不启动 吸料风机 也不 清理吸料系统滤芯。
+       \item 滤芯清理次数：吸料系统启动前或吸料风机运行间隙，吸料系统自动清理滤芯的次数。
+   \end{itemize}
+
+   \newpage
+
+   \subsection{吸料操作}
+   \input{picture7}
+   \par按“启动”按钮开始吸料，按“停止”按钮停止吸料。 
+
+\section{投加系统操作规程}
+   \subsection{主操作界面}
+   \input{picture8}
+   \newpage
+
+   \subsection{系统参数设置}
+   系统参数设置 主要有 空压机、冷干机运行及报警参数设置。
+   \input{picture9}
+   \par空压机参数设置有 压缩空气压力过低设置值1项参数。
+   \input{picture10}
+   \par冷干机参数设置有 开机湿度、停机湿度、高湿度报警3项参数设置。
+   \newpage
+
+   \subsection{投加参数设置}\label{sec:sg3}
+   \input{picture11}
+   投加参数可设置如下：
+   \begin{itemize}
+       \item 重量过高报警：储存破拱料斗内 存料重量过高时报警的报警值。
+       \item 重量过低报警：储存破拱料斗内 存料重量过低时报警的报警值。
+       \item 投加点选择：可设置1号储液罐、2号储液罐、3号储液罐。
+       \item 投加重量设置：设置本次投加的重量，单位kg。
+   \end{itemize}
+
+   \subsection{自动运行操作}
+   按\ref{sec:sg3}说明在图\ref{fig:p11}设置好投加参数之后，点击“开始投加”，系统会自动按照图\ref{fig:p11}投加流程投加。
+   系统投加 高锰酸钾粉料 至设定重量后，会自动按投加流程停止。
+   投加完成后，送料风机 会继续运行1分钟，吹干净管道系统内残余物料。
+   \par 投加过程中，需要中途停止投加，可以按“投加中止”按钮，中止投加。
+
+   \subsection{投加工作流程}\label{sec:sg4}
+   投加 高锰酸钾粉料 的 工作流程如下：
+   \begin{enumerate}
+       \item 启动送料风机。
+       \item 开下料阀：系统检测各压力探头压力值，达到设定范围，打开下料阀。
+       \item 启动螺旋进料器。
+       \item 开出仓阀。
+       \item 向储液罐输送 高锰酸钾粉料。输送过程中，系统检测各传感器参数，有异常变化会自己运行清理程序防止堵料。
+       \item 关出仓阀：接近目标投加重量时，关出仓阀，但暂不停止 螺旋进料器 和关闭下料阀，将 螺旋进料器 内物料排净。
+       \item 停止螺旋进料器。
+       \item 关下料阀：关下料阀 后，暂不停止 送料风机，将管道内残余物料吹净。
+       \item 停止风机。
+   \end{enumerate}
+
+   \subsection{手动运行操作}
+   如果需要 手动运行操作，将 主控制柜 上 “手动/自动”切换开关调到“手动”。
+   然后按上述\ref{sec:sg4}流程，在 主控制柜 操作面板上，手动操作各设备运行、停止。
+   \input{picture12}
+
+\section{停机注意事项}
+   \begin{itemize}
+       \item 当系统所有设备停止运行后，才切断\ref{sec:sg2}中两个电源开关。
+       \item 当 储存破拱料斗内 仍然存放 高锰酸钾粉体物料 时，不建议切换系统电源。
+           因为环境湿度较高时，高锰酸钾粉体物料 极容易 结拱结块、堵塞设备及管道，
+           需要根据 温湿度探头 反馈向 储存破拱料斗内 通入 干燥冷空气，保持 储存破拱料斗内 干燥。
+   \end{itemize}
+
+
+\end{document}
