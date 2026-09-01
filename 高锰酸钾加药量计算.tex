@@ -1,0 +1,170 @@
+% *- coding: UTF-8 -*-
+% !TEX builder = Texlive
+% !TEX prggram = xelatex
+\documentclass[UTF8,a4paper,12pt,titlepage]{ctexart}
+% tittlepage制作一个封面
+% draft是草稿，有个方框
+%\documentclass[UTF8,a4paper,11pt]{book}
+
+%\CTEXsetup[name={第,章}]{section}%每section统一名称
+
+%每章节题目统一格式
+\CTEXsetup[format={\zihao{-3}\raggedright\bfseries}]
+{section}
+
+\newcommand{\keyword}[1]{\textbf{#1}}
+
+%\usepackage{microtype}
+
+% 纸张格式
+\usepackage[paper=a4paper,inner=1.5cm,outer=2cm,top=2cm,
+bottom=2.5cm,bindingoffset=0.5cm]{geometry}
+
+\usepackage[onehalfspacing]{setspace} % 1.5倍行距
+
+% 自动链接内容
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+% 设置文件属性内容
+\hypersetup{pdfauthor={吴毓明},
+            pdftitle={储罐底部静载称重模块的深化设计},
+            pdfsubject={使用说明},
+            pdfkeywords={任何问题，联系61508712@qq.com}}
+
+% 定义页眉页脚
+%\include{foot_head}
+
+% 表格 定义表头字体
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+
+% 表格 特殊命令，见后文 array
+% 在竖向多种对齐方式
+\usepackage{array}
+\setlength{\extrarowheight}{4pt} % 增加列距
+\usepackage{booktabs} % 用于美化表格的线
+\usepackage{multirow} % 合并行
+\newcommand{\normal}[1]{\multicolumn{1}{l}{#1}}
+
+% 图片
+\usepackage{graphicx}
+\usepackage{wrapfig} % 文字环绕图片
+
+% 流程图
+% 导入tikz绘图包
+\usepackage{tikz}
+% 导入基本图形
+\usetikzlibrary{shapes,arrows}
+%说明文字
+\tikzstyle{text_box} = [
+   rectangle,
+   rounded corners,
+   minimum width=1.5cm,
+   minimum height=0.5cm,
+   text centered, 
+   ]
+%箭头
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+%多行公式
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{
+   \zihao{1} 高锰酸钾 投加系统 加药量 计算\\[2.5mm]
+   {\noindent}\rule{16cm}{1pt}\\[3mm]
+   % \zihao{2} 广州市利亨昌贸易有限公司\\
+   \zihao{2} 宁夏宁东水务有限责任公司\\
+   % \zihao{4} 吴毓明\\
+   %\zihao{4} Wym\\
+   %\zihao{4} 2022年12月27日
+   %\begin{figure}[h]
+   %   \centering
+   %   \includegraphics[height=10cm]{g05.jpg}
+   %\end{figure}
+}
+
+\maketitle % 封面
+
+%\tableofcontents % 目录
+
+\newpage % 换页
+
+%\part{系统组成}
+%ctex的\chapter{sdsg}是不能用的
+
+\section{设计要求}
+    本项目设计 使用 高锰酸钾制备投加一体化装置 制备成 3\% 的 高锰酸钾 溶液 投加，
+    最大 投加量 按 1mg/L计，
+    原液浓度按 32\%计，
+    调配次数近期按每天2次计，
+    远期按每天3次计；
+    近期浓碱输液泵2台，
+    2用1备；高锰酸钾溶液 投药泵3台，
+
+    投加位置及投加量如下：
+
+      \begin{enumerate}
+          \item 进水泵房：2 处，1mg/L（每处规模为 40 万 $m^3/d$）；
+      \end{enumerate}
+
+
+\section{投加量计算}
+    \subsubsection{计算推导}
+        \par根据 《化学化工 物性数据手册》（化学工业出版社）无机卷，
+        第555页，
+        3\%（质量分数）的 高锰酸钾 水溶液 在 15 $^{\circ}C$ 时，
+        密度是 $\rho_{3\%KMnO_4}=1.0200 g/cm^3=1.0200kg/L$。
+      \begin{figure}[h]
+         \centering
+         \includegraphics[height=3.5cm]{p1.PNG}
+         \caption{3\% 高锰酸钾 溶液物性数据}
+      \end{figure}\\
+
+        设密度为$\rho$、
+        质量为$m$、
+        体积为$V$、
+        质量流量为$Q_m$、
+        体积流量为$Q_V$、
+        时间为$T$，则：
+        \begin{align}
+            \rho &= m \div V \\
+            Q_m &= m \div T\\
+            Q_v &= V \div T
+        \end{align}
+        由$\rho = m \div v$可得$m = \rho * V$，
+        代入$Q_m = m \div T$可得：
+        \begin{equation}
+            Q_m = \rho * V \div T = \rho * Q_v
+        \end{equation}
+        则：
+        \begin{equation}
+            Q_v = Q_m \div \rho = Q_m \div \rho_{3\%KMnO_4}
+        \end{equation}\label{equation5}
+
+    \subsubsection{进水泵房 投加量计算}
+        设计水量为40万$m^3/d$，
+        高锰酸钾 的 投率 为1mg/L，
+        则 高锰酸钾 溶质 的 投加量 为：\\
+        \begin{equation}
+            400000m^3/d \times 1mg/L = \frac{400000}{24} m^3/h
+            \times \frac{1 \times 0.001 \times 0.001}{0.001}kg/m^3
+            = 16.6666666667 kg/h
+        \end{equation}
+        投加 高锰酸钾 溶液的 浓度（质量分数）为3\%，
+        则 投加的 质量流量 $Q_m$为：
+        \begin{equation}
+            Q_m = 16.6666666667 kg/h \div 3\% = 555.5555555556 kg/h
+        \end{equation}
+        代入\ref{equation5}，可得：
+        \begin{equation}
+            Q_v = Q_m \div \rho_{3\%KMnO_4} = 555.5555555556 kg/h \div 1.0200g/cm^3 = 544.6623093682 L/h
+        \end{equation}
+        厂区进水总管 3\%高锰酸钾溶液 设计投加量 约为 544.6623093682L/h。
+        \par此投加量由2台投加泵共同投加，
+        则每台投加泵投加量为：
+        \begin{equation}
+            544.6623093682 L/h \div 2 = 272.3311546841 L/h
+        \end{equation}
+
+
+\end{document}
