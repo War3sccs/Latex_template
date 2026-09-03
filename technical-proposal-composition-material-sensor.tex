@@ -1,0 +1,31 @@
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        %图片
+        \node at (0,0) {\includegraphics[height=8cm]{p9.PNG}};
+
+        %说明
+        \def \itemNumber {1};
+        \def \centertPoint {0,2.5};
+        \node at (-5,3) (\itemNumber) [text_box] {高料位探头};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.3)[red];
+        \def \itemNumber {2};
+        \def \centertPoint {0.3,-1.3};
+        \node at (-6,-3) (\itemNumber) [text_box] {低料位探头};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.3)[red];
+
+        % 辅助线
+        \def \xLimit {8};
+        \def \yLimit {5};
+        %\input{auxiliary_line}
+
+    \end{tikzpicture}
+    \caption{物位开关}\label{fig:p4-5}
+\end{figure}
+
+\par 检测料斗中的干粉的物量，
+料位过低时停止制备过程，
+料位过高时停止真空吸料机上料。
+

@@ -1,0 +1,45 @@
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        %图片
+        \node at (0,0) {\includegraphics[height=7cm]{f3.PNG}};
+
+        %说明
+        \def \itemNumber {1};
+        \def \centertPoint {-0.8,2};
+        \node at (-5,3) (\itemNumber) [text_box] {背压阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.5)[red];
+        \def \itemNumber {2};
+        \def \centertPoint {-0.8,-0.6};
+        \node at (-5,-3) (\itemNumber) [text_box] {泄压阀};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.5)[red];
+        \def \itemNumber {3};
+        \def \centertPoint {-2,0.5};
+        \node at (-5,0) (\itemNumber) [text_box] {标定柱};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (-2.2,-1.5) rectangle +(0.8,3.5)[red];
+
+        % 辅助线
+        \def \xLimit {8};
+        \def \yLimit {5};
+        %\input{auxiliary_line}
+
+    \end{tikzpicture}
+    \caption{背压阀}\label{fig:p5-3}
+\end{figure}
+
+\par 背压阀用于在计量泵系统中维持计量泵的背压，
+与阻尼器配套可以达到消除系统压力波动、减小计量泵输出流量脉动、使计量泵输出流量更加稳定的目的，
+也有防止虹吸的作用。
+技术参数：
+\begin{itemize}
+    \item 数量：3个
+    \item 形式：隔膜式
+    \item 背压压力可调范围：0$\sim$3bar
+    \item 最大耐受压力：10bar
+    \item 材质：PVC壳体，PTFE/FKM复合隔膜，接液端为PTFE，背面为FKM
+\end{itemize}
+

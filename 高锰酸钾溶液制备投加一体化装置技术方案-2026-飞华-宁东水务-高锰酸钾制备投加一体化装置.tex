@@ -1,0 +1,129 @@
+% *- coding: UTF-8 -*-
+% !TEX builder = Texlive
+% !TEX prggram = xelatex
+
+%文档设置及格式
+\documentclass[UTF8,a4paper,12pt,titlepage]{ctexart}
+\include{document_setting}
+
+% 设置文件属性内容
+\hypersetup{pdfauthor={吴毓明},
+            pdftitle={高锰酸钾溶液制备投加一体化装置},
+            pdfsubject={使用说明},
+            pdfkeywords={任何问题，联系61508712@qq.com}}
+
+% 定义页眉页脚
+\include{foot_head}
+
+% 表格格式定义
+\include{table_format}
+
+% 图片
+\include{picture_configuration}
+
+% 特殊符号(例如千分号等)
+\usepackage{textcomp}
+
+% 流程图
+\include{flow_chart_preamble}
+
+% 开始正文
+\begin{document}
+
+% 制作封面
+\include{title}
+
+\tableofcontents % 目录
+
+\newpage % 换页
+
+%\part{系统组成}
+%ctex的\chapter{sdsg}是不能用的
+
+\section{高锰酸钾溶液一体化自动制备装置简要介绍}
+\input{technical-proposal-brief-introduction}
+
+\section{设计依据}
+\input{technical-proposal-product-standard.tex}
+\newpage
+
+\section{制备工艺流程}
+\input{technical-proposal-operation-flow.tex}
+
+\section{制备系统组成}
+    \subsection{制备装置槽体}
+    \input{technical-proposal-composition-tank.tex}
+    \newpage
+
+    \subsection{搅拌器}
+    \input{technical-proposal-composition-stirrer.tex}
+
+    \subsection{超声波液位计}
+    \input{technical-proposal-composition-level-meter.tex}
+    
+    \subsection{螺旋进料器}
+    \input{technical-proposal-composition-screw.tex}
+    
+    \subsection{物位开关}
+    \input{technical-proposal-composition-material-sensor.tex}
+    \newpage
+    
+    \subsection{进料斗}
+    \input{technical-proposal-composition-material-silo.tex}
+
+    \subsection{真空吸料机}
+    \input{technical-proposal-composition-material-vacuum.tex}
+    \newpage
+
+    \subsection{压力表及压力变送器}
+    \input{technical-proposal-composition-pressure-meter.tex}
+    
+    \subsection{进水流量探头}
+    \input{technical-proposal-composition-flow-meter.tex}
+    \newpage
+
+    \subsection{进水电动阀}
+    \input{technical-proposal-composition-electric-valve.tex}
+    
+\section{投加系统组成}
+    \subsection{投加计量泵}
+    \input{technical-proposal-composition-metering-pump.tex}
+
+    \subsection{脉动阻尼器}
+    \input{technical-proposal-composition-damper.tex}
+
+    \subsection{隔膜压力表}
+    \input{technical-proposal-composition-chemical-pressure.tex}
+    
+    \subsection{背压阀}
+    \input{technical-proposal-composition-back-pressure.tex}
+    
+    \subsection{泄压阀}
+    \input{technical-proposal-composition-release.tex}
+    
+    \subsection{标定柱}
+    \input{technical-proposal-composition-calibration-pot.tex}
+    
+    \subsection{流量计}
+    \input{technical-proposal-composition-chemical-flow.tex}
+
+\section{自动控制系统}
+   \subsection{PLC}
+    \input{technical-proposal-composition-PLC.tex}
+    \newpage
+
+   \subsection{触摸屏}
+    \input{technical-proposal-composition-HMI.tex}
+    
+   \subsection{电气元件}
+    \input{technical-proposal-composition-electric-equipment.tex}
+    \newpage
+
+   \subsection{电柜}
+    \input{technical-proposal-composition-electric-cubicle.tex}
+    \newpage
+
+\section{配置清单}
+    \input{technical-proposal-item-list.tex}
+
+\end{document}

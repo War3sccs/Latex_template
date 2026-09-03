@@ -1,0 +1,38 @@
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        %图片
+        \node at (0,0) {\includegraphics[height=7cm]{f4.PNG}};
+
+        %说明
+        \def \itemNumber {1};
+        \def \centertPoint {-0.1,0.2};
+        \node at (-3,0) (\itemNumber) [text_box] {流量计};
+        \draw [arrow] (\itemNumber) -- (\centertPoint);
+        \draw (\centertPoint) circle (0.5)[red];
+
+        % 辅助线
+        \def \xLimit {8};
+        \def \yLimit {5};
+        %\input{auxiliary_line}
+
+    \end{tikzpicture}
+    \caption{流量计}\label{fig:p5-7}
+\end{figure}
+
+\par 椭圆齿轮容积式流量计，
+可测量极低流速液体，
+特别适用于流量变化范围极大的化学品投加。
+
+\par主要技术参数：
+\begin{itemize}
+    \item 数量：3台
+    \item 品牌：Paddle-flow
+    \item 型号：FG
+    \item 流量：3$\sim$520L/h
+    \item 最大耐受压力压力：10bar。
+    \item 材质：CPVC壳体，PEEK齿轮
+    \item 反馈信号：4$\sim$20mA，RS-485
+\end{itemize}
+
