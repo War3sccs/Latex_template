@@ -13,7 +13,7 @@
             pdfkeywords={任何问题，联系61508712@qq.com}}
 
 % 定义页眉页脚
-%\include{foot_head}
+\include{foot_head}
 
 % 表格格式定义
 \include{table_format}
@@ -31,7 +31,7 @@
 \begin{document}
 
 % 制作封面
-% \include{title}
+\include{title}
 
 \tableofcontents % 目录
 
@@ -39,91 +39,98 @@
 
 %\part{系统组成}
 %ctex的\chapter{sdsg}是不能用的
+\section{相关服务计划（售后服务方案）}
 
-\section{高锰酸钾溶液一体化自动制备装置简要介绍}
-\input{technical-proposal-brief-introduction}
+为保障石门水厂次氯酸钠投加系统的长期、稳定、高效运行，
+\textbf{浙江东嘉水务有限公司}基于完善的服务体系与雄厚的技术力量，
+制定了科学、合理、完整的产品售后服务方案。
+我方郑重承诺：服务机制完善，技术水平优良，日常技术咨询及技术支持等服务方案优秀，
+且我司在广州本地设有强大的售后服务支持力量，能快速消除客户对我司售后服务效率的顾虑。
 
-\section{设计依据}
-\input{technical-proposal-product-standard.tex}
-\newpage
+\subsection{管理指标及服务承诺}
+我方深刻理解自来水厂对设备连续运行的严格要求，为此设定以下明确的管理指标并作出郑重承诺：
+\begin{itemize}
+    \item \textbf{设备完好率指标}：
+        确保在质保期内，系统设备的平均无故障运行时间（MTBF）达到 \(> 8000\) 小时，设备完好率保证在 \(98\%\) 以上。
+    \item \textbf{质保期承诺}：
+        设备自最终验收合格之日起计，质量保证期为 \textbf{2 年}。在质保期内，免费修理并负责更换有缺陷零件或整机。
+    \item \textbf{寿命与备件保障}：设备正常使用寿命至少 3 年，密封材料寿命不少于 2 年。
+        提供质保期后 5 年的备品备件清单，保障后期维护。
+    \item \textbf{本地化服务与备件保障}：\textbf{我司在广州设有固定的售后服务中心，服务中心常驻专业技术人员，并建有充足的常用备件库存}，确保突发故障时人员与备件能迅速调拨到位，极大缩短停机等待时间。
+    \item \textbf{响应时效指标}：收到采购人协助抢修、维修通知后，
+        我方承诺 \textbf{20 分钟内予以电话/微信/网络答复}。若电话或微信沟通无法排除故障，我司将按以下分级时效提供现场支持：
+        \begin{itemize}
+            \item \textbf{紧急故障}（影响系统核心投加功能或导致停产）：承诺 \textbf{8 小时内} 提供紧急现场支持；
+            \item \textbf{一般故障}（局部功能异常但可通过旁路等维持基本运行）：承诺 \textbf{24 小时内} 提供现场支持；
+            \item \textbf{不影响生产的故障}（如一般显示异常、非关键部位渗漏等）：承诺 \textbf{48 小时内} 提供现场支持。
+        \end{itemize}
+\end{itemize}
 
-\section{制备工艺流程}
-\input{technical-proposal-operation-flow.tex}
+\subsection{维护人员配备及团队建设}
+为提供强有力的技术支持，我司为本项目配置了专职的售后服务团队：
+\begin{itemize}
+    \item \textbf{项目负责人（1名）}：
+        统筹售后服务工作，负责与采购人保持沟通，调度内部资源，监督服务质量。
+    \item \textbf{自控/电气工程师（1名）}：
+        负责 PLC 控制系统、人机界面（触摸屏）、上位机通讯的故障诊断与程序维护，
+        熟悉Allen-Bradley品牌各系列PLC的编程，
+        具备丰富的 PID 参数整定与组态修改经验。
+    \item \textbf{机械/工艺工程师（1名）}：
+        负责磁力离心泵、智能调节阀、流量计及管路阀门的排查、维修与更换，
+        精通次氯酸钠药液投加工艺、处理腐蚀性化学品经验丰富。
+    \item \textbf{机修技工（1名）}：
+        负责现场管路的维护、泵体及机械部件的拆装检修、承插粘接管路的修复与更换等具体施工作业。
+    \item \textbf{维修电工（1名）}：
+        负责系统配电柜、现场控制箱的电气线路排查、电机线路检修、接地检测及日常用电安全保障。
+    \item \textbf{备件调试员（1名）}：
+        负责售后服务备品备件的库存管理、出入库登记、发货调度，以及新备件更换后的现场调试与配合工作。
+    \item \textbf{技术专家团队（远端支持）}：
+        由公司总部研发及技术骨干组成，针对现场疑难杂症提供升级故障分析支持。
+\end{itemize}
+所有现场服务人员均经过原厂专业培训，持证上岗，并严格遵守水厂的安全管理规定。
 
-\section{制备系统组成}
-    \subsection{制备装置槽体}
-    \input{technical-proposal-composition-tank.tex}
-    \newpage
+\subsection{完整实用的服务机制}
+\subsubsection{故障响应与维修机制}
+\begin{itemize}
+    \item \textbf{报修渠道}：提供 7×24 小时售后服务热线电话及\textbf{微信报修服务}，确保全天候受理采购人的报修请求。
+    \item \textbf{远程支援}：接到报修后 20 分钟内，技术人员通过电话、微信进行初步诊断，指导现场操作人员排除简单故障。
+    \item \textbf{现场维修}：
+        依托我司在广州的售后服务中心及备件库，若远程无法解决，技术人员将严格按照上述承诺的时效（8小时/24小时/48小时）抵达现场进行抢修。
+        因产品质量问题需在线维修的，承诺在 48 小时内完成修复。
+        如遇到现场无法修复且需返厂的情况，我方承诺无条件免费更换合格的替换设备，并利用本地备件库提前将替换设备运至指定地点。
+    \item \textbf{维修报告}：
+        每次维修后，我方将向采购人提交故障原因分析、修理内容及恢复正常的时间报告，并一式两份存档。
+\end{itemize}
 
-    \subsection{搅拌器}
-    \input{technical-proposal-composition-stirrer.tex}
+\subsubsection{定期巡检与隐患排查机制}
+\begin{itemize}
+    \item \textbf{巡检周期}：质保期内，每月安排一次现场巡检；
+        在试运行（3个月）及每年加药高峰期前，主动开展专项巡检。
+    \item \textbf{巡检内容}：
+        检测磁力泵与电机轴承状态；校验流量计与调节阀的精度；
+        检查 PLC 控制系统运行日志；检查管路是否有渗漏、结晶隐患；清理控制柜灰尘等。
+    \item \textbf{巡检记录}：
+        形成标准化的《设备巡检报告》，对发现的隐患进行分级管理，并协助水厂建立设备健康档案。
+\end{itemize}
 
-    \subsection{超声波液位计}
-    \input{technical-proposal-composition-level-meter.tex}
-    
-    \subsection{螺旋进料器}
-    \input{technical-proposal-composition-screw.tex}
-    
-    \subsection{物位开关}
-    \input{technical-proposal-composition-material-sensor.tex}
-    \newpage
-    
-    \subsection{进料斗}
-    \input{technical-proposal-composition-material-silo.tex}
+\subsection{技术水平与技术支持承诺}
+\subsubsection{现场安装指导与调试}
+我方负责整个设备的组装（出厂前组装完毕），并在现场提供指导安装、整体调试及试运行。调试过程严格按“先辅机后主机、先空载后带载”的原则进行，配合完成单机空载调试（2小时）及带载调试（24小时），并全程配合 3 个月的试运行及性能检测。
 
-    \subsection{真空吸料机}
-    \input{technical-proposal-composition-material-vacuum.tex}
-    \newpage
+\subsubsection{日常技术咨询与培训}
+\begin{itemize}
+    \item \textbf{人员培训}：
+        在设备交付及调试期间，由我方经验丰富的工程师为水厂操作及维修人员进行现场培训。培训内容涵盖：手动/自动操作、例行检查与润滑、装置隔离拆卸与更换、故障查找及 HMI/PLC 基础操作。交通、食宿、会议等一切费用由我方承担。
+    \item \textbf{终身技术咨询}：
+        无偿提供设备整个寿命周期内的技术咨询服务，包括设备相关备品备件的购买厂家、市场价及设备维护保养注意事项等。
+    \item \textbf{软件无偿升级}：
+        在设备寿命期内，若因上位机系统或网络架构升级导致通讯不适配，我方将无偿提供 PLC 及触摸屏控制程序的升级与联调服务。
+\end{itemize}
 
-    \subsection{压力表及压力变送器}
-    \input{technical-proposal-composition-pressure-meter.tex}
-    
-    \subsection{进水流量探头}
-    \input{technical-proposal-composition-flow-meter.tex}
-    \newpage
+\subsubsection{质量保证期结束后的延伸服务}
+质量保证期满后，我方继续提供强大的技术支持。
+在水厂进行大修或有重大工艺调整时，我方将派专员到场协助。
+对于质保期后的维修，我方承诺仅收取必要的备件成本费及人工差旅费，绝不收取额外的技术服务费。
 
-    \subsection{进水电动阀}
-    \input{technical-proposal-composition-electric-valve.tex}
-    
-\section{投加系统组成}
-    \subsection{投加计量泵}
-    \input{technical-proposal-composition-metering-pump.tex}
-
-    \subsection{脉动阻尼器}
-    \input{technical-proposal-composition-damper.tex}
-
-    \subsection{隔膜压力表}
-    \input{technical-proposal-composition-chemical-pressure.tex}
-    
-    \subsection{背压阀}
-    \input{technical-proposal-composition-back-pressure.tex}
-    
-    \subsection{泄压阀}
-    \input{technical-proposal-composition-release.tex}
-    
-    \subsection{标定柱}
-    \input{technical-proposal-composition-calibration-pot.tex}
-    
-    \subsection{流量计}
-    \input{technical-proposal-composition-chemical-flow.tex}
-
-\section{自动控制系统}
-   \subsection{PLC}
-    \input{technical-proposal-composition-PLC.tex}
-    \newpage
-
-   \subsection{触摸屏}
-    \input{technical-proposal-composition-HMI.tex}
-    
-   \subsection{电气元件}
-    \input{technical-proposal-composition-electric-equipment.tex}
-    \newpage
-
-   \subsection{电柜}
-    \input{technical-proposal-composition-electric-cubicle.tex}
-    \newpage
-
-\section{配置清单}
-    \input{technical-proposal-item-list.tex}
 
 \end{document}
